@@ -18,13 +18,15 @@ void printArray(int array[11][11], const int row, const int column) {
     {
         for (int j = 0; j < column; j++) {
             if (j == 0 or i == 0) { cout << setw(2) << color<6, 0> << array[i][j] << color<7, 0>; }
-            else { if (array[i][j] == 1) { cout << setw(2) << color<4, 0> << array[i][j] << color<7, 0>; } else { cout << setw(2) << color<7, 0> << array[i][j] << color<7, 0>; } }
+            else { 
+                if (array[i][j] == 1) { cout << setw(2) << color<4, 0> << array[i][j] << color<7, 0>; } 
+                else { cout << setw(2) << color<7, 0> << array[i][j] << color<7, 0>; } }
         }
         cout << endl;
     }
 }
 
-int main()
+int main1()
 {
     const int row = 11, column = 11; //размеры массива
     int array[row][column] = { 
@@ -58,5 +60,5 @@ int main()
         cout << "2)" << sy2 << " " << sx2 << " -> " << ty2 << " " << tx2 << ";  ";
         cout << "3)" << sy3 << " " << sx3 << " -> " << ty3 << " " << tx3;
     }
-    
+    return 0;
 }
